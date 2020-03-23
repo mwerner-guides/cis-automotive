@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+Dir['./lib/**'].each{|f| load f }
+require_relative 'app'
+
+brand, model = *ARGV
+if brand.nil? || model.nil?
+  puts "Usage: cis brand model"
+  exit(1)
+end
+
+app = App.new
+data = app.find(brand, model)
+app.present(brand, model, data)

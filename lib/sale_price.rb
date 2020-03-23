@@ -1,0 +1,2 @@
+class SalePrice < Price
+end

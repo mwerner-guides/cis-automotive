@@ -1,0 +1,2 @@
+class ListPrice < Price
+end
